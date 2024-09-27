@@ -3,12 +3,12 @@ document.getElementById('donate-btn').addEventListener('click', function (event)
 
     const donateMoney1 = getInputFieldValueById('input-amount-1');
 
-    if(donateMoney1 > 0){
+    if (donateMoney1 > 0) {
         const balance = getTextFieldValueById('total-balance');
         const totalDonationAmount = getTextFieldValueById('total-donation-1');
         const newBalance = balance - donateMoney1;
         const newDonationAmount = totalDonationAmount + donateMoney1;
-        
+
         document.getElementById('total-balance').innerText = newBalance;
         document.getElementById('total-donation-1').innerText = newDonationAmount;
 
@@ -20,22 +20,22 @@ document.getElementById('donate-btn').addEventListener('click', function (event)
         alert('Thanks for your Donation')
 
     }
-    else{
+    else {
         alert('Please Try Again')
     }
 })
-document.getElementById('donate-btn-2').addEventListener('click', function(event){
+document.getElementById('donate-btn-2').addEventListener('click', function (event) {
     event.preventDefault();
 
     const donateMoney2 = getInputFieldValueById('input-amount-2');
 
-    if(donateMoney2 > 0){
+    if (donateMoney2 > 0) {
         const balance2 = getTextFieldValueById('total-balance');
         const totalDonationAmount2 = getTextFieldValueById('total-donation-2');
         const newDonationAmount2 = donateMoney2 + totalDonationAmount2;
         const newBalance2 = balance2 - donateMoney2;
-        
-        
+
+
 
         document.getElementById('total-balance').innerText = newBalance2;
         document.getElementById('total-donation-2').innerText = newDonationAmount2;
@@ -47,23 +47,23 @@ document.getElementById('donate-btn-2').addEventListener('click', function(event
         alert('Thanks for your Donation')
 
     }
-    else{
+    else {
         alert('try again');
     }
 })
 
-document.getElementById('donate-btn-3').addEventListener('click', function(event){
+document.getElementById('donate-btn-3').addEventListener('click', function (event) {
     event.preventDefault();
 
     const donateMoney3 = getInputFieldValueById('input-amount-3');
 
-    if(donateMoney3 > 0){
+    if (donateMoney3 > 0) {
         const balance3 = getTextFieldValueById('total-balance');
         const totalDonationAmount3 = getTextFieldValueById('total-donation-3');
         const newDonationAmount3 = donateMoney3 + totalDonationAmount3;
         const newBalance3 = balance3 - donateMoney3;
 
-        
+
         document.getElementById('total-donation-3').innerText = newDonationAmount3;
         document.getElementById('total-balance').innerText = newBalance3;
 
@@ -71,26 +71,26 @@ document.getElementById('donate-btn-3').addEventListener('click', function(event
         div.classList.add();
         div.innerHTML = `
         <h1 class="text-lg font-semibold">${donateMoney3} Taka donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
-        <p></p>
+        
         `
         document.getElementById('transaction-container').appendChild(div)
         alert('Thanks for your Donation')
 
     }
-    else{
+    else {
         alert('try again');
     }
 })
 
 
-    
+
 // transaction section codes --->
 
-document.getElementById('transaction-history').addEventListener('click', function(){
+document.getElementById('transaction-history').addEventListener('click', function () {
     showDonationSectionById('transaction-container');
 })
 
-document.getElementById('donation-btn').addEventListener('click', function(){
+document.getElementById('donation-btn').addEventListener('click', function () {
     showDonationSectionById('donation-section')
 })
 
